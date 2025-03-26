@@ -109,7 +109,7 @@ def main(args):
     sigma_VD = args.sigma_VD
     margin_VD = 1.0 / (lamb_VD * dim)
     begin = time.time()
-    vd = lbvdcma(func=func, xmean0=mean_VD, sigma0=sigma_VD, domain_int=domain_int, margin=margin_VD, lamb=lamb_VD, ssa=args.step_size_control, maxeval=budget, ftarget=target)
+    vd = lbvdcma(dim_int=dim_int, dim_co=dim_co, func=func, xmean0=mean_VD, sigma0=sigma_VD, domain_int=domain_int, margin=margin_VD, lamb=lamb_VD, ssa=args.step_size_control, maxeval=budget, ftarget=target)
     is_success, x_best, f_best, evals = vd.run()
     end = time.time()
 
