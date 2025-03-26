@@ -10,7 +10,10 @@ This repository contains the official code for our paper, *"Toward Efficient Mix
     git clone https://github.com/nAuTahn/eMI-BBO
     cd eMI-BBO
     ```
-2. **Besides [NumPy](https://numpy.org/), you also need [SciPy](https://scipy.org/) to perform some calculations.**
+2. **Make sure to install the required libraries. Besides [NumPy](https://numpy.org/), you also need [SciPy](https://scipy.org/) to perform some calculations.**
+
+## **Performance evaluation on standard MIP benchmark functions.**
+You can reproduce the results in our paper by running the following scripts. Hyperparameters can be adjusted based on the papers or customized by the user.
 
 # Citation
 
