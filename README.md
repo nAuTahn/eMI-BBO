@@ -19,7 +19,7 @@ python test.py --func ellipsoid_int --dim 120  --dim_co 80 --max_evals 100000 --
 ```
 Another argument `--list_funcs` is added to support displaying the names of some available benchmark functions. Additionally, users can add other objective functions in `test.py` for evaluation.
 
-# Citation
+## Citation
 
 If you use our source code, please cite our work as:
 
@@ -33,3 +33,9 @@ If you use our source code, please cite our work as:
   year         = {2025}
 }
 ```
+
+## Acknowledgement
+Our source code is inspired by:
+- [Comparison-Based Natural Gradient Optimization in High Dimension](https://github.com/akimotolab/RCMA/blob/main/code/vdcma.py)
+- [Fast Moving Natural Evolution Strategy for High-Dimensional Problems](https://github.com/nomuramasahir0/crfmnes)
+- [Natural Evolution Strategy for Mixed-Integer Black-Box Optimization](https://github.com/ono-lab/dxnesici)
