@@ -17,6 +17,7 @@ You can reproduce the results in our paper by running the following scripts. Hyp
 ```bash
 python test.py --func ellipsoid_int --dim 120  --dim_co 80 --max_evals 100000 --target 1e-10 --sigma_VD 0.5 --sigma_NES 0.5 --step_size_control "TPA"
 ```
+Another argument `--list_funcs` is added to support displaying the names of some available benchmark functions. Additionally, users can add other objective functions in `test.py` for evaluation.
 
 # Citation
 
