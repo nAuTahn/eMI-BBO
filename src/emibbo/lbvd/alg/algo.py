@@ -12,7 +12,7 @@ from numpy.random import rand  # for randomised restarts
 
 
 class lbvdcma:
-    def __init__(self, func, xmean0, sigma0, domain_int, margin, lamb, **kwargs):
+    def __init__(self, dim_int, dim_co, func, xmean0, sigma0, domain_int, margin, lamb, **kwargs):
         if 'seed' in kwargs.keys():
             np.random.seed(kwargs['seed'])
 
@@ -61,8 +61,8 @@ class lbvdcma:
         self.func = func
         self.xmean = xmean0
         self.sigma = sigma0
-        self.dim_co = self.N // 2
-        self.dim_int = self.N // 2
+        self.dim_co = dim_co
+        self.dim_int = dim_int
         self.domain_int = domain_int
         self.norm_ci = norm.ppf(1. - margin)
         self.dig = np.ones(self.N)
