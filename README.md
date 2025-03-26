@@ -14,6 +14,9 @@ This repository contains the official code for our paper, *"Toward Efficient Mix
 
 ## **Performance evaluation on standard MIP benchmark functions.**
 You can reproduce the results in our paper by running the following scripts. Hyperparameters can be adjusted based on the papers or customized by the user.
+```bash
+python test.py --func ellipsoid_int --dim 120  --dim_co 80 --max_evals 100000 --target 1e-10 --sigma_VD 0.5 --sigma_NES 0.5 --step_size_control "TPA"
+```
 
 # Citation
 
