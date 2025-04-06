@@ -19,7 +19,6 @@ def main(args):
         return np.sum(xbar**2)
     def sphere_one_max(x):
         xbar = np.array(x)
-        xbar[dim_co:] = np.round(xbar[dim_co:])
         xbar[dim_co:] = np.where(xbar[dim_co:] > 0, 1.0, 0.0)
         return np.sum(xbar[:dim_co]**2) + dim_int - np.sum(xbar[dim_co:])
     def n_int_tablet(x):
@@ -45,12 +44,12 @@ def main(args):
         return np.sum(np.power(xbar, power))
     def sphere_leading_one(x):
         xbar = np.array(x)
-        xbar[dim_co:] = np.round(xbar[dim_co:])
+        xbar[dim_co:] = np.where(xbar[dim_co:] > 0, 1.0, 0.0)
         Prod = np.array([np.prod(xbar[dim_co:i+1]) for i in range(dim_co, dim)])
         return np.sum((xbar[:dim_co])**2) + dim_int - np.sum(Prod)
     def ellipsoid_one_max(x):
         xbar = np.array(x)
-        xbar[dim_co:] = np.round(xbar[dim_co:])
+        xbar[dim_co:] = np.where(xbar[dim_co:] > 0, 1.0, 0.0)
         coefficients = np.array([math.pow(1e3, i / (dim_co - 1.)) for i in range(dim_co)]).reshape(-1,1)
         return np.sum((coefficients * xbar[:dim_co])**2) + dim_int - np.sum(xbar[dim_co:])
     
